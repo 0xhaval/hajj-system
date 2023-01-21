@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-16 13:12:08.227413",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "level",
+  "stay_in_muzdalifah",
+  "column_break_3",
+  "member",
+  "gender",
+  "section_break_6",
+  "mahrm"
+ ],
+ "fields": [
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "First\nSecond\nThird\nFourth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "member.gender",
+   "fetch_if_empty": 1,
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.gender == \"Female\"",
+   "fieldname": "mahrm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mahrm",
+   "mandatory_depends_on": "eval:doc.gender == \"Female\"",
+   "options": "Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "stay_in_muzdalifah",
+   "fieldtype": "Check",
+   "label": "Stay in Muzdalifah"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-16 13:41:55.402413",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Trip Members",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

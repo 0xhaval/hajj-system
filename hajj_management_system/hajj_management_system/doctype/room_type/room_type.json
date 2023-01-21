@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-RT-{YYYY}-{#####}",
+ "creation": "2022-12-05 11:44:59.130808",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_name",
+  "column_break_2",
+  "cost",
+  "details_section",
+  "description",
+  "column_break_6",
+  "member_capacity",
+  "smoke_friendly",
+  "setting_tab",
+  "section_break_7",
+  "based_on_occupancy",
+  "column_break_12",
+  "base_on_bed_size_and_number",
+  "based_on_layout"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "The cost per night",
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "setting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Setting"
+  },
+  {
+   "description": "Please select one of Based",
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Member Capacity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "smoke_friendly",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Smoke Friendly"
+  },
+  {
+   "default": "0",
+   "fieldname": "based_on_occupancy",
+   "fieldtype": "Check",
+   "label": "Based on Occupancy"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "base_on_bed_size_and_number",
+   "fieldtype": "Check",
+   "label": "Base on Bed size and Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "based_on_layout",
+   "fieldtype": "Check",
+   "label": "Based on Layout"
+  },
+  {
+   "fieldname": "type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Rooms",
+   "link_fieldname": "room_type"
+  }
+ ],
+ "modified": "2023-01-19 09:43:46.052852",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Room Type",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "type_name",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "type_name"
+}

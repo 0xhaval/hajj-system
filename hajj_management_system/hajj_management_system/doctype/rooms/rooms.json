@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-RO-{YYYY}-{#####}",
+ "creation": "2022-12-05 11:55:16.404691",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "room_number",
+  "territory",
+  "column_break_2",
+  "room_type",
+  "room_type_name",
+  "hotel",
+  "room_type_details_section",
+  "cost",
+  "column_break_7",
+  "member_capacity",
+  "smoke_friendly",
+  "reference_section",
+  "item_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Room Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Room Type",
+   "options": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Hotel",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "item_ref",
+   "fieldtype": "Link",
+   "label": "Item Ref",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "room_type_details_section",
+   "fieldtype": "Section Break",
+   "label": "Room Type Details"
+  },
+  {
+   "fetch_from": "room_type.cost",
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "room_type.member_capacity",
+   "fieldname": "member_capacity",
+   "fieldtype": "Int",
+   "label": "Member Capacity",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "room_type.smoke_friendly",
+   "fieldname": "smoke_friendly",
+   "fieldtype": "Check",
+   "label": "Smoke Friendly",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Free\nOccupied",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "room_type.type_name",
+   "fieldname": "room_type_name",
+   "fieldtype": "Data",
+   "label": "Room Type Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-16 11:39:41.758569",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Rooms",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

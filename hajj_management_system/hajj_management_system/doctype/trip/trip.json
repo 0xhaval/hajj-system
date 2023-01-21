@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-TRP-{YYYY}-{#####}",
+ "creation": "2023-01-16 12:17:23.895335",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trip_name",
+  "column_break_2",
+  "trip_manager",
+  "section_break_3",
+  "from_date",
+  "column_break_6",
+  "to_date",
+  "section_break_8",
+  "trip_members",
+  "agency_tab",
+  "agency",
+  "column_break_12",
+  "type",
+  "tab_break_12",
+  "airline",
+  "column_break_14",
+  "country",
+  "section_break_18",
+  "route_of_flight",
+  "booking_tab",
+  "trip_booking"
+ ],
+ "fields": [
+  {
+   "fieldname": "trip_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trip Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trip_manager",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trip Manager",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Members"
+  },
+  {
+   "fieldname": "trip_members",
+   "fieldtype": "Table",
+   "label": "Trip Members",
+   "options": "Trip Members"
+  },
+  {
+   "fieldname": "agency_tab",
+   "fieldtype": "Tab Break",
+   "label": "Agency"
+  },
+  {
+   "fieldname": "agency",
+   "fieldtype": "Link",
+   "label": "Agency",
+   "options": "Agency"
+  },
+  {
+   "fieldname": "tab_break_12",
+   "fieldtype": "Tab Break",
+   "label": "Route of flight"
+  },
+  {
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "label": "Airline",
+   "options": "Airline"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "airline.country",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agency.agency_type",
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route_of_flight",
+   "fieldtype": "Table",
+   "label": "Route of flight",
+   "options": "Route of flight"
+  },
+  {
+   "fieldname": "booking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Booking"
+  },
+  {
+   "fieldname": "trip_booking",
+   "fieldtype": "Table",
+   "label": "Trip Booking",
+   "options": "Trip Booking",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-18 11:50:07.643330",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Trip",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "trip_name",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "trip_name"
+}
